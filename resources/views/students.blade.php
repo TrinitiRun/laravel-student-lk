@@ -12,15 +12,13 @@
 <h3>Вы находитесь в вашем личном кабинете</h3>
 
 <h3>Информация по студентам: </h3>
-@foreach($students as $people)
     <ul>
-        <li>{{$people->firstname}}</li>
-        <li>{{$people->lastname}}</li>
-        <li>{{$people->secondname}}</li>
-        <li>{{$people->group_number}}</li>
-        <li>{{$people->faculty}}</li>
-        <li>{{$people->course}}</li>
+        <li>{{$student->firstname}}</li>
+        <li>{{$student->lastname}}</li>
+        <li>{{$student->secondname}}</li>
+        <li>{{$student->group_number}}</li>
+        <li>{{$student->faculty}}</li>
+        <li>{{$student->course}}</li>
     </ul>
-@endforeach
 </body>
 </html>

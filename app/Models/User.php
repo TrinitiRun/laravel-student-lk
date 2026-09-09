@@ -29,4 +29,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function student()
+    {
+        //У одног есть один
+        //Студент принадлежит пользователю
+        return $this->hasOne(Student::class);
+    }
 }
