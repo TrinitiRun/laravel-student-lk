@@ -20,5 +20,10 @@
         <li>{{$student->faculty}}</li>
         <li>{{$student->course}}</li>
     </ul>
+
+<form method="POST" action="/logout">
+    @csrf
+    <button type="submit">Выйти</button>
+</form>
 </body>
 </html>

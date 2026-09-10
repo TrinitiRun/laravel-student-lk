@@ -13,6 +13,7 @@
         <input type="email" name="email" placeholder="Email" />
         <input type="password" name="password" placeholder="Пароль" />
         <button type="submit">Войти</button>
+
     </form>
 </body>
 </html>
