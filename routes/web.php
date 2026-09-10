@@ -44,3 +44,10 @@ Route::post('/logout', function (Request $request) {
     return redirect('/login');
 });
 
+Route::get('/register', function () {
+   return view('register');
+});
+
+Route::post('/register', function () {
+
+});
