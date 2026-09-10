@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Student;
 
@@ -45,9 +46,19 @@ Route::post('/logout', function (Request $request) {
 });
 
 Route::get('/register', function () {
-   return view('register');
+    return view('register');
 });
 
 Route::post('/register', function () {
-
+    $user = User::create(['name' => request('firstname') . ' ' . request('lastname'), 'email' => request('email'), 'password' => bcrypt(request('password'))]);
+    $user->student()->create([
+            'firstname' => request('firstname'),
+            'lastname' => request('lastname'),
+            'secondname' => request('secondname'),
+            'faculty' => request('faculty'),
+            'course' => request('course'),
+            'group_number' => request('group_number')]
+    );
+    Auth::login($user);
+    return redirect('/students');
 });
