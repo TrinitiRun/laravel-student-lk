@@ -45,6 +45,8 @@ Route::post('/logout', function (Request $request) {
     return redirect('/login');
 });
 
+
+
 Route::get('/register', function () {
     return view('register');
 });
@@ -61,4 +63,9 @@ Route::post('/register', function () {
     );
     Auth::login($user);
     return redirect('/students');
+});
+
+
+Route::get('/forgot-password', function () {
+    return view('forgot-password');
 });
