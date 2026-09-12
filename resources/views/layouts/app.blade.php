@@ -10,15 +10,27 @@
     <link rel="stylesheet" href="/css/fontawesome/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="header">
-            Шапка
-{{--            <i class="fas fa-user"></i>--}}
+<header>
+    <div class="header">
+        <div class="header-items">
+            <div class="logotip">
+                <img src="/img/МГИК.webp" alt="logotip"/>
+            </div>
+            <div class="header-right">
+                <div class="fio">
+                    {{$student->lastname}} {{mb_substr($student->firstname, 0, 1)}}.{{mb_substr($student->secondname, 0,1)}}.
+                </div>
+                <form method="POST" action="/logout">
+                    @csrf
+                    <button class="btn-logout" type="submit"><i class="fas fa-sign-out-alt"></i></button>
+                </form>
+            </div>
         </div>
-    </header>
-    @yield('content')
-    <footer>
-        Подвал
-    </footer>
+    </div>
+</header>
+@yield('content')
+<footer>
+    Подвал
+</footer>
 </body>
 </html>

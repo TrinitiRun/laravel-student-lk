@@ -1,5 +1,7 @@
 @extends('layouts.app')
+
 @section('content')
+
 <h1>Приветствую!</h1>
 <h3>Вы находитесь в вашем личном кабинете</h3>
 
@@ -13,8 +15,5 @@
         <li>{{$student->course}}</li>
     </ul>
 
-<form method="POST" action="/logout">
-    @csrf
-    <button type="submit">Выйти</button>
-</form>
+
 @endsection
