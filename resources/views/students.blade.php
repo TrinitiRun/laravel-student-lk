@@ -1,19 +1,28 @@
 @extends('layouts.app')
-
 @section('content')
 
-<h1>Приветствую!</h1>
-<h3>Вы находитесь в вашем личном кабинете</h3>
+    <div class="profile-wrap">
+        <div class="profile-top">
+            <h1>{{ $student->lastname }} {{ $student->firstname }} {{ $student->secondname }}</h1>
+        </div>
 
-<h3>Информация по студентам: </h3>
-    <ul>
-        <li>{{$student->firstname}}</li>
-        <li>{{$student->lastname}}</li>
-        <li>{{$student->secondname}}</li>
-        <li>{{$student->group_number}}</li>
-        <li>{{$student->faculty}}</li>
-        <li>{{$student->course}}</li>
-    </ul>
-
-
+        <div class="profile-tiles">
+            <div class="tile">
+                <i class="fas fa-users"></i>
+                <span class="tile-label">Группа</span>
+                <span class="tile-value">{{ $student->group_number }}</span>
+            </div>
+            <div class="tile">
+                <i class="fas fa-layer-group"></i>
+                <span class="tile-label">Курс</span>
+                <span class="tile-value">{{ $student->course }}</span>
+            </div>
+            <div class="tile">
+                <i class="fas fa-university"></i>
+                <span class="tile-label">Факультет</span>
+                <span class="tile-value">{{ $student->faculty }}</span>
+            </div>
+        </div>
+    </div>
 @endsection
+
