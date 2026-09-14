@@ -37,6 +37,7 @@
             </label>
 
             <button class="btn-reg-auth" type="submit">Зарегистрироваться</button>
+            <a class="btn-reg-auth-link" href="{{ route('login') }}">Авторизоваться</a>
         </form>
     </div>
 @endsection
