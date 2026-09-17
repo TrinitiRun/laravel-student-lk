@@ -50,3 +50,7 @@ Route::post('/forgot-password',[PasswordController::class, 'forgotPassword']);
 
 Route::get('/reset-password/{token}', [PasswordController::class, 'showResetPassword']);
 Route::post('/reset-password', [PasswordController::class, 'resetPassword']);
+
+
+//Показать профиль студента
+Route::get('/profile', [StudentController::class, 'showProfile']);

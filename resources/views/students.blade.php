@@ -1,28 +1,44 @@
 @extends('layouts.app')
 @section('content')
-
     <div class="profile-wrap">
         <div class="profile-top">
-            <h1>{{ $student->lastname }} {{ $student->firstname }} {{ $student->secondname }}</h1>
+            <h1>Доступные разделы</h1>
         </div>
 
         <div class="profile-tiles">
-            <div class="tile">
-                <i class="fas fa-users"></i>
-                <span class="tile-label">Группа</span>
-                <span class="tile-value">{{ $student->group_number }}</span>
-            </div>
-            <div class="tile">
-                <i class="fas fa-layer-group"></i>
-                <span class="tile-label">Курс</span>
-                <span class="tile-value">{{ $student->course }}</span>
-            </div>
-            <div class="tile">
-                <i class="fas fa-university"></i>
-                <span class="tile-label">Факультет</span>
-                <span class="tile-value">{{ $student->faculty }}</span>
-            </div>
+            <a href="/profile" class="tile">
+                <i class="fas fa-user"></i>
+                <span class="tile-label">Профиль</span>
+            </a>
+            <a href="#" class="tile">
+                <i class="fas fa-book-open"></i>
+                <span class="tile-label">Моё обучение</span>
+            </a>
+            <a href="#" class="tile">
+                <i class="fas fa-calendar-alt"></i>
+                <span class="tile-label">Расписание</span>
+            </a>
+            <a href="#" class="tile">
+                <i class="fas fa-book"></i>
+                <span class="tile-label">Зачётная книжка</span>
+            </a>
+            <a href="#" class="tile">
+                <i class="fas fa-file-alt"></i>
+                <span class="tile-label">Справки</span>
+            </a>
+            <a href="#" class="tile">
+                <i class="fas fa-wallet"></i>
+                <span class="tile-label">Финансы</span>
+            </a>
+            <a href="#" class="tile">
+                <i class="fas fa-briefcase"></i>
+                <span class="tile-label">Портфолио</span>
+            </a>
         </div>
     </div>
 @endsection
 
+{{--{{ $student->lastname }} {{ $student->firstname }} {{ $student->secondname }}--}}
+{{--{{ $student->faculty }}--}}
+{{--{{ $student->course }}--}}
+{{--{{ $student->group_number }}--}}

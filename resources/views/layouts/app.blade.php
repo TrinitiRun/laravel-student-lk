@@ -6,7 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Личный кабинет</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/fontawesome/css/all.min.css">
 </head>
 <body>
@@ -30,7 +33,7 @@
 </header>
 @yield('content')
 <footer>
-    Подвал
+
 </footer>
 </body>
 </html>

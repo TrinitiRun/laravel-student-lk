@@ -12,4 +12,9 @@ class StudentController extends Controller
         $student = Auth::user()->student; // берем текущего залогиненного пользователя // достаем профиль студента через связь hasOne
         return view('students', ['student' => $student]); //
     }
+    public function showProfile()
+    {
+        $student = Auth::user()->student; // берем текущего залогиненного пользователя // достаем профиль студента через связь hasOne
+        return view('profile', ['student' => $student]); //
+    }
 }
