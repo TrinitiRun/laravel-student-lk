@@ -47,10 +47,15 @@ Route::post('/forgot-password',[PasswordController::class, 'forgotPassword']);
 
 
 
-
+//появление ссылки на изменение пароля
 Route::get('/reset-password/{token}', [PasswordController::class, 'showResetPassword']);
 Route::post('/reset-password', [PasswordController::class, 'resetPassword']);
 
 
 //Показать профиль студента
 Route::get('/profile', [StudentController::class, 'showProfile']);
+
+//Данный роут для заглушки при переходе на ссылки-плитки где еще нет контента
+Route::get('/coming-soon/{section}', function ($section) {
+    return view('coming-soon', ['section' => $section]);
+});
